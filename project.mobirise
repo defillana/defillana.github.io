@@ -1,0 +1,154 @@
+{
+  "settings": {
+    "name": "Defillama",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2.5,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.2,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#22242a"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.0",
+    "siteFonts": [
+      {
+        "css": "'Inter Tight', sans-serif",
+        "name": "Inter Tight",
+        "url": "https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "favicon": "@PROJECT_PATH@/assets/images/defillama_1.png",
+    "imageResize": true,
+    "usedWebp": true,
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://defillana.github.io/sitemap.xml\n\n\n",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://defillana.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "mbrsiteDomain": "kvrpydqfda",
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "5.9.0",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Defillama™ | Home | Official Site",
+        "meta_descr": "DefiLlama is a DeFi TVL aggregator. It is committed to providing accurate data without ads or sponsored content, as well as transparency.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image4\" group=\"Images & Videos\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <a href=\"https://defillama.com/\"><img src=\"@PROJECT_PATH@/assets/images/defillama.png\" alt=\"defillama\"></a>\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "tXKsuPjNMj",
+          "_anchor": "image04-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "2.25rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#ffffff",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#ffffff"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"12\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#22242a\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#22242a\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>Defillama™ | Home Official Site</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Introduction:</b>\n                </h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                  The decentralized finance (DeFi) industry has witnessed exponential growth, revolutionizing the way we interact with financial services. As the DeFi ecosystem expands, the need for comprehensive data analysis and tracking tools becomes paramount. DeFiLlama emerges as a powerful platform that empowers users to explore, analyze, and track various DeFi protocols and their performance. In this article, we delve into the world of DeFiLlama, exploring its features, advantages, and the impact it has on the DeFi landscape.\n                </p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Exploring DeFiLlama:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>a. The Rise of DeFi Data Analysis:</b> <a href=\"https://defillama.com/\" class=\"text-primary\">DeFiLlama</a> is a prominent platform that aggregates and presents vital data and analytics of different DeFi protocols in one place. It aims to provide users with a comprehensive understanding of the DeFi landscape by offering real-time information about protocol TVL (Total Value Locked), lending and borrowing rates, trading volumes, token prices, and much more. DeFi Llama acts as a window to the world of decentralized finance, enabling users to make informed decisions based on accurate and up-to-date information.\n<br>\n<br><b>b. Unveiling the Power of Data Visualization:</b> DeFi Llama presents complex data in a visually appealing and easy-to-understand format. Through intuitive charts, graphs, and dashboards, users can quickly grasp key insights and analyze trends within the DeFi ecosystem. Data visualization enhances user experience, allowing both novice and experienced users to navigate and interpret complex data effortlessly.</p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Key Features and Advantages of DeFiLlama:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>a. Protocol Tracking and Analysis:\n</b><br>\n<br><b>i. Total Value Locked (TVL):</b> DeFiLlama provides real-time information on the TVL of various DeFi protocols. TVL represents the total amount of assets locked within a particular protocol. By tracking TVL, users can assess the popularity and growth of different protocols, identifying potential investment opportunities or gauging the overall health of the DeFi ecosystem.\n<br>\n<br><b>ii. Lending and Borrowing Rates:</b> <a href=\"https://defillana.github.io/\" class=\"text-primary\">DeFiLlama</a> offers insights into lending and borrowing rates across multiple DeFi platforms. Users can compare interest rates and identify protocols that offer favorable rates for lending or borrowing assets. This information helps users optimize their DeFi strategies and maximize their returns.\n<br>\n<br><b>iii. Trading Volumes and Liquidity:</b> DeFiLlama tracks trading volumes and liquidity across decentralized exchanges (DEXs) and automated market makers (AMMs). Users can monitor trading activity and liquidity levels for different tokens and trading pairs, enabling them to make data-driven decisions when executing trades or providing liquidity.\n<br>\n<br><b>b. Token Information and Analytics:\n</b><br>\n<br><b>i. Token Prices and Performance:</b> DeFiLlama provides real-time data on token prices, allowing users to track the performance of various DeFi tokens. Users can analyze historical price movements, identify trends, and make informed decisions based on token performance. This information is crucial for traders and investors seeking to capitalize on market opportunities within the DeFi space.\n<br>\n<br><b>ii. Token Metrics and Analytics:</b> DeFiLlama offers comprehensive information about DeFi tokens, including market capitalization, circulating supply, fully diluted valuation, and more. Users can evaluate token fundamentals and assess the potential value and growth prospects of different DeFi projects. This data-driven approach enables users to make informed investment decisions and manage their portfolios effectively.\n<br>\n<br><b>c. Portfolio Tracking and Management:\n</b><br>\n<br><b>i. Portfolio Aggregation:</b> DeFiLlama allows users to aggregate and track their DeFi portfolios in one place. Users can connect their wallets to DeFiLlama and monitor the value of their assets across multiple protocols and tokens. This feature simplifies portfolio management and provides a holistic view of one's DeFi holdings.\n<br>\n<br><b>ii. Performance Analytics:</b> DeFiLlama provides portfolio performance analytics, including historical returns, asset allocation, and risk metrics. Users can evaluate the performance of their DeFi investments and make informed decisions regarding portfolio rebalancing or asset reallocation. These insights facilitate portfolio optimization and help users achieve their investment goals.\n<br>\n<br><b>d. DeFi Protocol Discovery:\n</b><br>\n<br><b>i. Protocol Research:</b> <a href=\"https://defilla-ma.github.io/\" class=\"text-primary\">DeFiLlama</a> offers a platform for users to explore and research various DeFi protocols. Users can discover new projects, read protocol overviews, and assess key metrics before deciding to invest or participate in a particular protocol. DeFiLlama acts as a valuable resource for users seeking to expand their DeFi knowledge and stay updated with the latest developments in the industry.\n<br>\n<br><b>ii. Risk Assessment:</b> DeFiLlama assists users in assessing the risk associated with different DeFi protocols. By providing information on TVL, auditing reports, and security measures, users can evaluate the security and reliability of protocols before engaging with them. This risk assessment capability helps users make informed decisions and mitigate potential risks within the DeFi ecosystem.</p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Impact and Benefits of DeFiLlama:</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>a. Data-Driven Decision-Making:</b> DeFiLlama empowers users to make informed decisions based on accurate and up-to-date data. By providing real-time information on TVL, interest rates, trading volumes, and token performance, DeFiLlama enables users to navigate the DeFi landscape with confidence. This data-driven approach reduces reliance on speculation and emotions, increasing the chances of successful investment and trading strategies.\n<br>\n<br><b>b. Efficient Portfolio Management:</b> DeFiLlama's portfolio tracking and management features simplify the process of monitoring and managing DeFi assets. Users can track their holdings across multiple protocols and tokens in one place, gaining a comprehensive view of their portfolio's value and performance. This streamlines portfolio management and enables users to optimize their DeFi investments effectively.\n<br>\n<br><b>c. Enhanced Market Transparency:</b> DeFiLlama plays a crucial role in increasing market transparency within the DeFi ecosystem. By aggregating and presenting data from different protocols, DeFiLlama provides a standardized and accessible source of information. This transparency fosters trust among users and facilitates the growth of the DeFi industry as a whole.\n<br>\n<br><b>d. Risk Mitigation:</b> DeFiLlama's risk assessment features contribute to mitigating potential risks associated with DeFi protocols. Users can assess the security measures and auditing reports of different protocols, making informed decisions about their engagement. This risk mitigation capability helps protect users from potential scams or vulnerabilities within the DeFi space.\n<br>\n<br><b>e. Research and Innovation:</b> DeFiLlama serves as a catalyst for research and innovation in the DeFi industry. By providing a platform for protocol discovery and research, DeFiLlama encourages users to explore new projects and stay updated with the latest developments. This fosters innovation and drives the evolution of the DeFi ecosystem.</p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Conclusion:</b>\n                </h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                  DeFiLlama emerges as a powerful tool in the world of decentralized finance, revolutionizing the way users analyze, track, and navigate the DeFi landscape. With its comprehensive data analysis, visualization capabilities, and portfolio management features, DeFiLlama empowers users to make informed decisions, optimize their DeFi strategies, and mitigate risks. As the DeFi industry continues to grow and evolve, platforms like DeFiLlama will play a crucial role in unlocking the full potential of decentralized finance, fostering transparency, and driving innovation.\n                </p>\n              </div>\n            </div>\n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "tXKsvRDnRr",
+          "_anchor": "article07-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
